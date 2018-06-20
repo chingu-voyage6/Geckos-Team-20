@@ -1,16 +1,13 @@
-## Budget application requirements:  
+## Budget application MVP requirements:  
 
-* User can add income/outcome and assign the category (food, entertainment)
+* Users can view their income/expenses balance  
 
-* The app show cash left in current month. (income-expenses=money left)
+* Users can add an expense/income, assign a category to it and write down a brief description  
 
-* You can view weekly, monthly and yearly statistics
+* Users can edit and/or remove an expense/income  
 
-* Data will be stored on server
-
-extra feature:
-
-* graph showing money spent each day in last week
+* Users can log in either by signing up or by logging with their FaceBook/Google account 
 
 
-example: Android app - [Fast Budget - Expense & Money Manager](https://play.google.com/store/apps/details?id=com.blodhgard.easybudget&hl=en_US)
+
+
