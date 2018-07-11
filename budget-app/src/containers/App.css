@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  background-color: #011627;
+}
+
+.App{
+  color: white;
+}
+
+.appBtn {
+  background-color: rgb(4, 209, 4);
+  border: none;
+  padding: 10px;
+  width: 100px;
+}
