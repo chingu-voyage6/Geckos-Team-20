@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import Text from '../components/Text';
-class App extends Component {
+import './Budget.css';
+import Text from './components/Text';
+class Budget extends Component {
   state = {
     showText: false
   }
@@ -20,7 +20,7 @@ let rendertext = null;
 
 
     return (
-      <div className="App">
+      <div className="Budget">
         <h1>Expense Tracker</h1>
         <p>Do you really know what are you spending money on?</p>
         <p>Now you can control your money with our Expense Tracker!
@@ -32,4 +32,4 @@ Hit the button below to begin </p>
   }
 }
 
-export default App;
+export default Budget;
