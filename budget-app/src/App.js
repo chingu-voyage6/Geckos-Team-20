@@ -13,6 +13,8 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button';
 
+const About = () => <h1>About Us</h1>
+
 class App extends Component {
   render() {
     return (
@@ -30,17 +32,17 @@ class App extends Component {
                     <Link to="/budget">Budget app</Link>
                   </Button>
                   <Button variant="contained">
-                    <Link to="*">Not Found</Link>
+                    <Link to="/about">Not Found</Link>
                   </Button>
                 </div>
             </Toolbar>
         </AppBar>
         <div className="app">
-        <Switch>
-          <Route exact path="/" compontent={Home} />
-          <Route path="/budget" compontent={Budget} />
-          <Route path="*" compontent={NotFound} />
-        </Switch>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/budget" component={Budget} />
+            <Route path="*" component={NotFound} />
+          </Switch>
         </div>
       </div>
     );
