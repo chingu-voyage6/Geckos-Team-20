@@ -1,33 +1,23 @@
 import React, { Component } from 'react';
 import './Budget.css';
-import Text from './components/Text';
+import Add from './components/Add';
 class Budget extends Component {
-  state = {
-    showText: false
+  constructor(props){
+    super(props);
+    // this.state = {
+    
+    // }
   }
+  
 
-  toggleShowTextHandler = (event) =>{
-    const doesShow = this.state.showText;
-    this.setState({showText: !doesShow});
-  }
 
   render() {
-let rendertext = null;
-    if(this.state.showText){
-      rendertext = <Text />
-    }
+
 
 
 
     return (
-      <div className="Budget">
-        <h1>Expense Tracker</h1>
-        <p>Do you really know what are you spending money on?</p>
-        <p>Now you can control your money with our Expense Tracker!
-Hit the button below to begin </p>
-        <button className="appBtn" onClick={this.toggleShowTextHandler}> Show the app!</button>
-        {rendertext}
-      </div>      
+      <Add />  
     );
   }
 }
