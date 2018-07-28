@@ -1,12 +1,18 @@
 import React from 'react';
+import styles from './add.css'
+const Add = (props) => {
+      
+    
 
-const add = () =>{
+    
     return (
         <div>
-        <input onChange="" type="number"/><button type="sumbit"/> //submit button
-        //add the value to the state
-        //show the value in 
-        <p>this is the text</p>
+        <p className={styles.inputInfo}>this is the text</p>
+        <input onChange="" type="number"/>
+        <button type="submit" onSubmit=""> Add value </button> 
+        {/*add the value to the state*/}
+        {/*show the value in*/} 
+        
         </div>
     )
 }
@@ -14,4 +20,4 @@ const add = () =>{
 
 
 
-export default add;
+export default Add;
