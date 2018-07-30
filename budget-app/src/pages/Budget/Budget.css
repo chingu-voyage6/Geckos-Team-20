@@ -7,6 +7,10 @@ body {
   color: white;
 }
 
+h3 {
+  display: block;
+  color: #fff;
+}
 .appBtn {
   background-color: rgb(4, 209, 4);
   border: none;

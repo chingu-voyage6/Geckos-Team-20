@@ -13,7 +13,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button';
 
-const About = () => <h1>About Us</h1>
+// const About = () => <h1>About Us</h1>
 
 class App extends Component {
   render() {
