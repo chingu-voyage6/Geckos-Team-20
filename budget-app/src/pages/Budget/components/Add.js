@@ -13,10 +13,10 @@ class Add extends Component {
     
     render() {
         return (
-            <form onSubmit={this.props.handler} value={this.state.amount}>
+            <form  value={this.state.amount}>
                 <p className={styles.inputInfo}>Please, enter an amount:</p>
-                <input value={this.state.amount} onChange={this.handleChange} type="number" />
-                <button> Add value </button> 
+                <input value={this.state.amount} onChange={this.handleChange} onBlur={this.props.handler} type="number" placeholder="Enter your amount" />
+                {/* <button> Add value </button>  */}
                 {/*add the value to the state*/}
                 {/*show the value in*/} 
             </form>

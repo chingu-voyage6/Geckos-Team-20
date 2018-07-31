@@ -30,9 +30,14 @@ class Budget extends Component {
 
   handlerAmountChange(event) {
     event.preventDefault();
-    // const newID = this.state.amountHistory[this.state.amountHistory.length-1].id + 1;
-    // const value = event.target.value;
-    console.log(event.target.value); 
+    //adding new fields to our array
+    var value = event.target.value;
+    var array = this.state.amountHistory;
+    var newID = array[array.length-1].id + 1;
+    array.push({"id": newID, "amount": parseFloat(value)});
+    this.setState({
+        amountHistory: array
+      })
   }
   
   render() {
