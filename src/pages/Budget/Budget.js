@@ -9,16 +9,18 @@ class Budget extends Component {
     super(props);
     this.state = {
       amountHistory: [
-        {id: 1, amount: 200},
-        {id: 2, amount: 240},
-        {id: 3, amount: 385},
+        {id: 1, amount: -200, description: "Tickets"},
+        {id: 2, amount: -240, description: "MP3 player"},
+        {id: 3, amount: -385, description: "New clothes"},
+        {id: 4, amount: 1800,description: "Salary"}
       ],
       total: ''
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
   }
-  totalAmount() {
+//function counting total amounts added 
+  totalAmount()  {
     var array = this.state.amountHistory;
     var total = 0;
     var i;
@@ -28,17 +30,23 @@ class Budget extends Component {
     return total;
   }
 
-  handlerAmountChange(event, amount) {
+  handlerAmountChange(event, amount, description) {
     event.preventDefault();
     console.log(event, amount); 
     //adding new fields to our array
     var value = amount;
+    var desc = description;
     var array = this.state.amountHistory;
     var newID = array[array.length-1].id + 1;
-    array.push({"id": newID, "amount": parseFloat(value)});
+    array.push({
+      "id": newID,
+      "amount": parseFloat(value),
+      "description": desc 
+  });
     this.setState({
         amountHistory: array
       })
+    
   }
   
   render() {
@@ -47,8 +55,6 @@ class Budget extends Component {
       <div className="Budget"> 
         <Add handler={this.handlerAmountChange} />
         <Balance balance={this.totalAmount()} />
-
-        <h3>Your budget activity:</h3>
         <List amountHistory={this.state.amountHistory} />
       </div>
     );
