@@ -12,7 +12,8 @@ class Budget extends Component {
         {id: 1, amount: -200, description: "Tickets" },
         {id: 2, amount: -240, description: "MP3 player"},
         {id: 3, amount: -385, description: "New clothes"},
-        {id: 4, amount: 1800,description: "Salary"}
+        {id: 4, amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
+  
       ],
       total: ''
     }
@@ -36,6 +37,7 @@ class Budget extends Component {
     //adding new fields to our array
     var value = amount;
     var desc = description;
+    
     var array = this.state.amountHistory;
     var newID = array[array.length-1].id + 1;
     array.push({
@@ -48,7 +50,7 @@ class Budget extends Component {
     this.setState({
         amountHistory: array
       })
-    
+    console.log(this.state.amountHistory);
   }
   
   render() {
