@@ -9,7 +9,7 @@ class Budget extends Component {
     super(props);
     this.state = {
       amountHistory: [
-        {id: 1, amount: -200, description: "Tickets"},
+        {id: 1, amount: -200, description: "Tickets" },
         {id: 2, amount: -240, description: "MP3 player"},
         {id: 3, amount: -385, description: "New clothes"},
         {id: 4, amount: 1800,description: "Salary"}
@@ -30,7 +30,7 @@ class Budget extends Component {
     return total;
   }
 
-  handlerAmountChange(event, amount, description) {
+  handlerAmountChange(event, amount, description, date, category) {
     event.preventDefault();
     console.log(event, amount); 
     //adding new fields to our array
@@ -41,7 +41,9 @@ class Budget extends Component {
     array.push({
       "id": newID,
       "amount": parseFloat(value),
-      "description": desc 
+      "description": desc,
+      "date": date,
+      "category": category
   });
     this.setState({
         amountHistory: array

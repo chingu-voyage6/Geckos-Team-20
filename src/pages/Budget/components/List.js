@@ -12,7 +12,7 @@ class List extends Component {
                     {/* Here we get state as props from Budget.js */}
                     {
                         this.props.amountHistory.map(function(user, i){
-                            return <li key={ i }>${user.amount}:  {user.description}</li>;
+                        return <li key={ i }>${user.amount}:  {user.description} (added {user.date}) category:{user.category}</li>;
                         })
                     }
                 </ol>
