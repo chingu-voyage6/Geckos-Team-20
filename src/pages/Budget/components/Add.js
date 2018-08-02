@@ -8,7 +8,7 @@ class Add extends Component {
             amount: '',
             description: "",
             date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString() ,
-            category: ""
+            category: "grapefruit"
         };
         this.handleChange = this.handleChange.bind(this);
     }
@@ -18,17 +18,14 @@ class Add extends Component {
        
     }
 
-    // handleCategoryChange(event){
-    //     this.setState({category: event.target.value});
-    // }
+    
 
         static defaultProps ={
      categories: ["please", "choose", "category"]
         }
     
     render() {
-        // let categoryOptions = this.props.categories.map(category =>{
-        // return <option value={category}>{category}</option>});
+        
         return (
             <form onSubmit={(event)=> this.props.handler(event ,this.state.amount, this.state.description, this.state.date, this.state.category)}>
                 <p className={styles.inputInfo}>Please, enter an amount:</p>
@@ -44,8 +41,9 @@ class Add extends Component {
                         placeholder="and enter description"
                     />
                
-               <select name="category" value="sss" onChange={this.handleChange}>
+               <select className={styles.input} name="category" onChange={this.handleChange}>
                 {/* {categoryOptions} */}
+                    <option value="">Select your option</option>
                     <option value="grapefruit">Grapefruit</option>
                     <option value="lime">Lime</option>
                     <option value="coconut">Coconut</option>

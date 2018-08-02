@@ -9,10 +9,7 @@ class Budget extends Component {
     super(props);
     this.state = {
       amountHistory: [
-        {id: 1, amount: -200, description: "Tickets" },
-        {id: 2, amount: -240, description: "MP3 player"},
-        {id: 3, amount: -385, description: "New clothes"},
-        {id: 4, amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
+        {id: 1, amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
   
       ],
       total: ''
