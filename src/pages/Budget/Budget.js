@@ -11,20 +11,22 @@ class Budget extends Component {
     this.state = {
       amountHistory: [
         
-        {id: uuid.v4(), amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
+        {id: uuid.v4(), amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST",
+        deleteEntry: function(){
+          console.log("test");
+        }}
   
       ],
-      total: ''
+      total: '',
+      
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
-    this.deleteEntry = this.deleteEntry.bind(this);
   }
 //function counting total amounts added 
 
-deleteEntry(){
-  console.log("test");
-}
+
+
   totalAmount()  {
     var array = this.state.amountHistory;
     var total = 0;
