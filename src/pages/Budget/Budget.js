@@ -18,8 +18,13 @@ class Budget extends Component {
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
+    this.deleteEntry = this.deleteEntry.bind(this);
   }
 //function counting total amounts added 
+
+deleteEntry(){
+  console.log("test");
+}
   totalAmount()  {
     var array = this.state.amountHistory;
     var total = 0;

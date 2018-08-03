@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './list.css';
 
 class List extends Component {
-    deleteEntry(){
-        console.log("test");
-    }
+    
     
 
     render() {
