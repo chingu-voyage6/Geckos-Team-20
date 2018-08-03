@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './add.css';
 
+
 class Add extends Component {
     constructor(props) {
         super(props);
@@ -51,6 +52,7 @@ class Add extends Component {
                 </select>
             
                 <button className={styles.btn}> Add value </button> 
+                
                 {/*add the value to the state*/}
                 {/*show the value in*/} 
                 

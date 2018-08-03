@@ -3,13 +3,15 @@ import './Budget.css';
 import Add from './components/Add';
 import List from './components/List';
 import Balance from './components/Balance';
+import uuid from "uuid";
 
 class Budget extends Component {
   constructor(props){
     super(props);
     this.state = {
       amountHistory: [
-        {id: 1, amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
+        
+        {id: uuid.v4(), amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST"}
   
       ],
       total: ''
@@ -36,7 +38,8 @@ class Budget extends Component {
     var desc = description;
     
     var array = this.state.amountHistory;
-    var newID = array[array.length-1].id + 1;
+    // var newID = array[array.length-1].id + 1;
+    var newID = uuid.v4();
     array.push({
       "id": newID,
       "amount": parseFloat(value),

@@ -6,3 +6,7 @@ ol {
     text-align: center;
     display: inline-block;
 }
+
+.delete {
+    color: red;
+}
