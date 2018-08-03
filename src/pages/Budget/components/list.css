@@ -9,4 +9,5 @@ ol {
 
 .delete {
     color: red;
+    cursor: pointer;
 }

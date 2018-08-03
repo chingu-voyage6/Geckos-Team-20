@@ -18,13 +18,13 @@ class Budget extends Component {
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
-    this.deleteEntry = this.deleteEntry.bind(this);
+    this.amountHistoryChange = this.amountHistoryChange.bind(this);
   }
 //function counting total amounts added 
 
-deleteEntry(){
-  console.log("test");
-}
+// deleteEntry(){
+//   console.log("test");
+// }
   totalAmount()  {
     var array = this.state.amountHistory;
     var total = 0;
@@ -58,13 +58,18 @@ deleteEntry(){
     console.log(this.state.amountHistory);
   }
   
+  amountHistoryChange(event, id) {
+    event.preventDefault();
+    console.log(event, id); 
+  }
+
   render() {
     
     return (
       <div className="Budget"> 
         <Add handler={this.handlerAmountChange} />
         <Balance balance={this.totalAmount()} />
-        <List amountHistory={this.state.amountHistory} />
+        <List amountHistory={this.state.amountHistory} amountChange={this.amountHistoryChange} />
       </div>
     );
   }
