@@ -10,8 +10,7 @@ class Budget extends Component {
     super(props);
     this.state = {
       amountHistory: [],
-      total: ''
-      
+      total: ''      
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
@@ -29,6 +28,8 @@ componentWillMount(){
     ]  
   });
 }
+
+
 
   totalAmount()  {
     var array = this.state.amountHistory;
@@ -70,8 +71,7 @@ componentWillMount(){
     let amountHistory = this.state.amountHistory;
     let index = amountHistory.findIndex(x => x.id === id);
     amountHistory.splice(index, 1);
-console.log(amountHistory);
-    this.setState({amountHistory: amountHistory})
+    this.setState({amountHistory: amountHistory});
     }
 
   render() {

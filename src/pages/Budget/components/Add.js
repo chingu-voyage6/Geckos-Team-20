@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
 import styles from './add.css';
-
+import PropTypes from 'prop-types';
 
 class Add extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            amount: '',
+            amount: '0',
             description: "",
             date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString() ,
-            category: "grapefruit"
+            category: "none"
         };
         this.handleChange = this.handleChange.bind(this);
+        this.resetForm = this.resetForm.bind(this);
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
       console.log(event.target.name)
        
-    }
-
-    
+    }  
 
         static defaultProps ={
      categories: ["please", "choose", "category"]
         }
     
     render() {
-        
+
         return (
-            <form onSubmit={(event)=> this.props.handler(event ,this.state.amount, this.state.description, this.state.date, this.state.category)}>
+            <form >
+                <button className={styles.btn} onClick={this.resetForm}>Reset form</button> 
+
                 <p className={styles.inputInfo}>Please, enter an amount:</p>
                 <input className={styles.input} 
                         value={this.state.amount} 
@@ -51,7 +52,7 @@ class Add extends Component {
                     <option value="Income">Income</option>
                 </select>
             
-                <button className={styles.btn}> Add value </button> 
+                <button className={styles.btn} onClick={(event)=> this.props.handler(event,this.state.amount, this.state.description, this.state.date, this.state.category)}> Add value </button> 
                 
                 {/*add the value to the state*/}
                 {/*show the value in*/} 
@@ -59,6 +60,8 @@ class Add extends Component {
             </form>
         );
    }
+
+  
 }
 
 export default Add;
