@@ -45,23 +45,32 @@ componentWillMount(){
   handlerAmountChange(event, amount, description, date, category) {
     event.preventDefault();
     console.log(event, amount); 
+    var validate = false;
     //adding new fields to our array
     var value = amount;
     var desc = description;    
     var array = this.state.amountHistory;
+    var cat= category;
     // var newID = array[array.length-1].id + 1;
     var newID = uuid.v4();
-    array.push({
-      "id": newID,
-      "amount": parseFloat(value),
-      "description": desc,
-      "date": date,
-      "category": category
-  });
-    this.setState({
+    // if fields not empty
+    console.log(cat);
+    if (value && desc && newID && cat !== 'none') {
+      validate = true;
+    }
+    if (validate) {
+      array.push({
+        "id": newID,
+        "amount": parseFloat(value),
+        "description": desc,
+        "date": date,
+        "category": category
+      });
+      this.setState({
         amountHistory: array
       })
-    console.log(this.state.amountHistory);
+      console.log(this.state.amountHistory);
+    }
   }
   
   amountHistoryChange() {

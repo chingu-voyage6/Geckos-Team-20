@@ -44,7 +44,7 @@ class Add extends Component {
                
                <select className={styles.input} name="category" onChange={this.handleChange}>
                 {/* {categoryOptions} */}
-                    <option value="">and select your option</option>
+                    <option value="" selected disabled hidden>and select your option</option>
                     <option value="Food">Food</option>
                     <option value="Bills">Bills</option>
                     <option value="Entertainment">Entertainment</option>
