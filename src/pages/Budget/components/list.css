@@ -1,8 +1,6 @@
-ul li,
-ol li {
+li {
     color: #fff;
-}
-ol {
+
     text-align: center;
     display: inline-block;
 }

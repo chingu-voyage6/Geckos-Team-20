@@ -9,21 +9,26 @@ class Budget extends Component {
   constructor(props){
     super(props);
     this.state = {
-      amountHistory: [
-        
-        {id: uuid.v4(), amount: 1800, description: "Salary", date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(), category: "THIS IS TEST",
-        deleteEntry: function(){
-          console.log("test");
-        }}
-  
-      ],
-      total: '',
+      amountHistory: [],
+      total: ''
       
     }
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
-    this.amountHistoryChange = this.amountHistoryChange.bind(this);
+    this.handleDeleteListItem = this.handleDeleteListItem.bind(this);
   }
+
+componentWillMount(){
+  this.setState({amountHistory: [
+      {id: uuid.v4(),
+      amount: 1800, 
+      description: "Salary", 
+      date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(),
+      category: "THIS IS TEST"
+      }
+    ]  
+  });
+}
 
   totalAmount()  {
     var array = this.state.amountHistory;
@@ -40,8 +45,7 @@ class Budget extends Component {
     console.log(event, amount); 
     //adding new fields to our array
     var value = amount;
-    var desc = description;
-    
+    var desc = description;    
     var array = this.state.amountHistory;
     // var newID = array[array.length-1].id + 1;
     var newID = uuid.v4();
@@ -58,10 +62,17 @@ class Budget extends Component {
     console.log(this.state.amountHistory);
   }
   
-  amountHistoryChange(event, id) {
-    event.preventDefault();
-    console.log(event, id); 
+  amountHistoryChange() {
+    console.log("clicked!")
   }
+
+  handleDeleteListItem(id){
+    let amountHistory = this.state.amountHistory;
+    let index = amountHistory.findIndex(x => x.id === id);
+    amountHistory.splice(index, 1);
+console.log(amountHistory);
+    this.setState({amountHistory: amountHistory})
+    }
 
   render() {
     
@@ -69,7 +80,7 @@ class Budget extends Component {
       <div className="Budget"> 
         <Add handler={this.handlerAmountChange} />
         <Balance balance={this.totalAmount()} />
-        <List amountHistory={this.state.amountHistory} amountChange={this.amountHistoryChange} />
+        <List amountHistory={this.state.amountHistory} onDelete={this.handleDeleteListItem}/>
       </div>
     );
   }
