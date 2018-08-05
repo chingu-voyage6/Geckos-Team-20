@@ -10,8 +10,8 @@ class ListItem extends Component {
         return (
             <ol>
             <li className="ListItem">
-            ${this.props.item.amount}: {this.props.item.description} (added {this.props.item.date}) category: {this.props.item.category}
-            <a className={styles.delete} 
+            ${this.props.item.amount}: {this.props.item.description} (added {this.props.item.date}) category: {this.props.item.category} 
+              <a className={styles.delete} 
             onClick={this.deleteListItem.bind(this, this.props.item.id)}>X</a>
             </li>
             </ol>

@@ -39,16 +39,16 @@ class Add extends Component {
                 <input className={styles.input}
                         name="description"
                         onChange={this.handleChange}
-                        placeholder="and enter description"
+                        placeholder="the description"
                     />
                
                <select className={styles.input} name="category" onChange={this.handleChange}>
                 {/* {categoryOptions} */}
-                    <option value="">Select your option</option>
-                    <option value="grapefruit">Grapefruit</option>
-                    <option value="lime">Lime</option>
-                    <option value="coconut">Coconut</option>
-                    <option value="mango">Mango</option>
+                    <option value="">and select your option</option>
+                    <option value="Food">Food</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Income">Income</option>
                 </select>
             
                 <button className={styles.btn}> Add value </button> 

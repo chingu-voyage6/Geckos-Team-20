@@ -24,7 +24,7 @@ componentWillMount(){
       amount: 1800, 
       description: "Salary", 
       date: new Date().toLocaleDateString() + " at " + new Date().toLocaleTimeString(),
-      category: "THIS IS TEST"
+      category: "Income"
       }
     ]  
   });

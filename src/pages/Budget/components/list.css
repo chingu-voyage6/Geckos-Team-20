@@ -8,4 +8,6 @@ li {
 .delete {
     color: red;
     cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
 }
