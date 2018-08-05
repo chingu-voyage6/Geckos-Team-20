@@ -15,6 +15,7 @@ class Budget extends Component {
     this.handlerAmountChange = this.handlerAmountChange.bind(this);
     this.totalAmount = this.totalAmount.bind(this);
     this.handleDeleteListItem = this.handleDeleteListItem.bind(this);
+    this.resetForm = this.resetForm.bind(this);
   }
 
 componentWillMount(){
@@ -72,12 +73,19 @@ componentWillMount(){
     let index = amountHistory.findIndex(x => x.id === id);
     amountHistory.splice(index, 1);
     this.setState({amountHistory: amountHistory});
-    }
+  }
+
+  resetForm(event) {
+    event.preventDefault();
+    this.setState({amountHistory: []  
+  });
+  }
 
   render() {
     
     return (
       <div className="Budget"> 
+        <button className="btn" onClick={this.resetForm}>Reset form</button> 
         <Add handler={this.handlerAmountChange} />
         <Balance balance={this.totalAmount()} />
         <List amountHistory={this.state.amountHistory} onDelete={this.handleDeleteListItem}/>

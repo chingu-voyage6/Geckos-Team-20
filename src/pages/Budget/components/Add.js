@@ -12,13 +12,14 @@ class Add extends Component {
             category: "none"
         };
         this.handleChange = this.handleChange.bind(this);
-        this.resetForm = this.resetForm.bind(this);
+        
     }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
       console.log(event.target.name)
        
     }  
+
 
         static defaultProps ={
      categories: ["please", "choose", "category"]
@@ -28,8 +29,6 @@ class Add extends Component {
 
         return (
             <form >
-                <button className={styles.btn} onClick={this.resetForm}>Reset form</button> 
-
                 <p className={styles.inputInfo}>Please, enter an amount:</p>
                 <input className={styles.input} 
                         value={this.state.amount} 
