@@ -21,8 +21,8 @@ class App extends Component {
       <div>
         <AppBar position="static">
             <Toolbar>
-                <Typography variant="title" color="inherit">
-                BudgetApp Application
+                <Typography  variant="title" color="inherit">
+                Chingu Budget App
                 </Typography>
                 <div className="menu">
                   <Button variant="contained">

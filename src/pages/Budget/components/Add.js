@@ -29,7 +29,7 @@ class Add extends Component {
 
         return (
             <form >
-                <p className={styles.inputInfo}>Please, enter an amount:</p>
+                <p className={styles.inputInfo}>Please enter the amount:</p>
                 <input className={styles.input} 
                         value={this.state.amount} 
                         name="amount"

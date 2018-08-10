@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './Budget.css';
 import Add from './components/Add';
 import List from './components/List';
 import Balance from './components/Balance';
 import uuid from "uuid";
+
+import classes from "./Budget.css";
 
 class Budget extends Component {
   constructor(props){
@@ -94,10 +95,11 @@ componentWillMount(){
     
     return (
       <div className="Budget"> 
-        <button className="btn" onClick={this.resetForm}>Reset form</button> 
-        <Add handler={this.handlerAmountChange} />
+        <Add className={classes.inputs} handler={this.handlerAmountChange} />
         <Balance balance={this.totalAmount()} />
         <List amountHistory={this.state.amountHistory} onDelete={this.handleDeleteListItem}/>
+        <button className={classes.Btn} onClick={this.resetForm}>Reset form</button> 
+
       </div>
     );
   }

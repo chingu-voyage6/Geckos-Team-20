@@ -4,6 +4,11 @@ body {
   }
   
   .Home{
-    color: white;
+    color:white;
   }
   
+  .Img{
+    width: 50px;
+    height: 20%;
+    display: inline;
+  }
