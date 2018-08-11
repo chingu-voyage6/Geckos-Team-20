@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styles from './add.css';
-import PropTypes from 'prop-types';
 
 class Add extends Component {
     constructor(props) {

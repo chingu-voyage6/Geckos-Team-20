@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import $ from 'jquery'; 
-import './App.css';
+import classes from  './App.css';
 
 import Home from './pages/Home/Home';
 import Budget from './pages/Budget/Budget';
@@ -19,25 +19,25 @@ class App extends Component {
   render() {
     return (
       <div>
-        <AppBar position="static">
-            <Toolbar>
-                <Typography  variant="title" color="inherit">
-                Chingu Budget App
-                </Typography>
-                <div className="menu">
-                  <Button variant="contained">
-                    <Link to="/">Home</Link>
+        <AppBar className={classes.AppBar}  position="static">
+          <Toolbar>
+              <Typography  variant="title" color="inherit">
+                 Chingu Budget App
+              </Typography>
+              <div className={classes.menu}>
+                <Button className={classes.Btn} variant="contained">
+                    <Link className={classes.BtnLink} to="/">Home</Link>
                   </Button>
                   <Button variant="contained">
-                    <Link to="/budget">Budget app</Link>
+                    <Link   className={classes.BtnLink}  to="/budget">Budget app</Link>
                   </Button>
-                  <Button variant="contained">
-                    <Link to="/about">Not Found</Link>
+                  <Button  variant="contained">
+                    <Link  className={classes.BtnLink} to="/about">Not Found</Link>
                   </Button>
                 </div>
-            </Toolbar>
+          </Toolbar>
         </AppBar>
-        <div className="app">
+        <div className={classes.App}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/budget" component={Budget} />

@@ -14,7 +14,7 @@ class ListItem extends Component {
         return (
             <ol>
             <li className="ListItem">
-            ${this.props.item.amount}: {this.props.item.description} (added {this.props.item.date}) category: {this.props.item.category} 
+            $ {this.props.item.amount}: {this.props.item.description} (added {this.props.item.date}) category: {this.props.item.category} 
         <a className={styles.delete} 
             onClick={this.deleteListItem}>X</a>
             </li>
