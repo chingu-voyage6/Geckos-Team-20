@@ -24,11 +24,11 @@ class App extends Component {
               <Typography  variant="title" color="inherit">
                  Chingu Budget App
               </Typography>
-              <div className={classes.menu}>
-                <Button className={classes.Btn} variant="contained">
+              <div className={classes.btnBar}>
+                <Button variant="contained">
                     <Link className={classes.BtnLink} to="/">Home</Link>
                   </Button>
-                  <Button variant="contained">
+                  <Button  variant="contained">
                     <Link   className={classes.BtnLink}  to="/budget">Budget app</Link>
                   </Button>
                   <Button  variant="contained">

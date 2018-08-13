@@ -48,6 +48,8 @@ class Add extends Component {
                     <option value="Bills">Bills</option>
                     <option value="Entertainment">Entertainment</option>
                     <option value="Income">Income</option>
+                    <option value="Entertainment">Other</option>
+
                 </select>
             
                 <button className={styles.btn} onClick={(event)=> this.props.handler(event,this.state.amount, this.state.description, this.state.date, this.state.category)}> Add value </button> 

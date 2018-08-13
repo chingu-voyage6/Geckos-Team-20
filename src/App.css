@@ -2,63 +2,31 @@
 
 .AppBar{
   font-family: 'Arimo', sans-serif;
+  
 }
 
-.menu {
-  padding: 20px;
+.btnBar {
+  margin-left:0px;
   font-family: 'Arimo', sans-serif;
 }
 .BtnLink{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
-.Btn {
-  margin-right: 50px;
-}
-
-
-/* .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-
-.menu button {
+.btnBar button {
+  width: 140px;
   margin: 10px;
   padding: 10px;
+  background-color: #5b9aa0;
 }
-.menu button span {
-  display: block;
-  width: 100%;
-  height: 100%;
+
+@media screen and (max-width: 500px) {
+  .btnBar{
+    width: 80%;
+    height: 20%;
+     /* The width is 100%, when the viewport is 800px or smaller */
+  }  
 }
-.menu button span a {
-  display: block;
-  padding: 0 5px;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-} */
 
 
