@@ -25,15 +25,13 @@ class App extends Component {
                  Chingu Budget App
               </Typography>
               <div className={classes.btnBar}>
-                <Button variant="contained">
+                <Button variant="contained" >
                     <Link className={classes.BtnLink} to="/">Home</Link>
                   </Button>
                   <Button  variant="contained">
                     <Link   className={classes.BtnLink}  to="/budget">Budget app</Link>
                   </Button>
-                  <Button  variant="contained">
-                    <Link  className={classes.BtnLink} to="/about">Not Found</Link>
-                  </Button>
+                  
                 </div>
           </Toolbar>
         </AppBar>
